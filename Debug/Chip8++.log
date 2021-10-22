@@ -1,6 +1,6 @@
 ﻿  chip8.cpp
-D:\Personal Projects\Projects\CHIP8Emulator\src\chip8.cpp(58,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Personal Projects\Projects\CHIP8Emulator\src\chip8.cpp(58,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Personal Projects\Projects\CHIP8Emulator\src\chip8.cpp(101,23): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-D:\Personal Projects\Projects\CHIP8Emulator\src\chip8.cpp(328,21): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Personal Projects\Projects\CHIP8Emulator\src\chip8.cpp(64,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Personal Projects\Projects\CHIP8Emulator\src\chip8.cpp(64,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Personal Projects\Projects\CHIP8Emulator\src\chip8.cpp(82,17): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Personal Projects\Projects\CHIP8Emulator\src\chip8.cpp(153,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Chip8++.vcxproj -> D:\Personal Projects\Projects\CHIP8Emulator\Debug\Chip8++.exe
