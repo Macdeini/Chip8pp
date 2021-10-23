@@ -23,21 +23,19 @@ using namespace std;
 
 class Chip8 {
     public:
+        int pc;
+        uint16_t opcode;
+        uint16_t I;
+        uint16_t sptr;
+        uint8_t soundTimer;
+        uint8_t delayTimer;
+        bool drawFlag;
         uint8_t memory[4096];
         uint8_t registers[16];
         uint16_t stack[16];
-        uint16_t sptr;
         uint8_t key[16];
-        uint16_t I;
-        uint16_t opcode;
-        uint8_t delayTimer;
-        uint8_t soundTimer;
-        int pc;
-        int width;
-        int height;
         int display[64 * 32];
         sf::RectangleShape pixels[64 * 32];
-        bool drawFlag;
 
         uint8_t chip8_fontset[80] =
         {

@@ -9,12 +9,9 @@ int main()
 {
     sf::RenderWindow window(sf::VideoMode(64 * 10, 32 * 10), "Chip8");
 
-    const char* filepath = "D:/Personal Projects/Projects/CHIP8Emulator/games/roms/BRIX";
+    const char* filepath = "D:/Personal Projects/Projects/CHIP8Emulator/games/roms/PONG2";
 
     Chip8 chip8 = Chip8();
-    // Due to my limited amount of C++ experience I do not know why pc won't be initialized to 512 in the constructor
-    cout << chip8.pc << endl;
-    chip8.pc = 512;
     chip8.loadROM(filepath);
 
     while (window.isOpen())
@@ -48,15 +45,7 @@ void Chip8::draw(sf::RenderWindow& window) {
 
 Chip8::~Chip8() {}
 
-Chip8::Chip8() {
-    pc = 512;
-    opcode = 0;
-    I = 0;
-    sptr = 0;
-    soundTimer = 0;
-    delayTimer = 0;
-    drawFlag = false;
-
+Chip8::Chip8() : pc(512), opcode(0), I(0), sptr(0), soundTimer(0), delayTimer(0), drawFlag(false) {
     // Clear Display
     for (int i = 0; i < 64 * 32; i++) {
         display[i] = 0;
@@ -65,13 +54,13 @@ Chip8::Chip8() {
     }
 
     // Clear Stack
-    for (int i = 0; i < sizeof(stack); i++) { stack[i] = 0; }
+    for (int i = 0; i < 16; i++) { stack[i] = 0; }
 
     // Clear Registers 
-    for (int i = 0; i < sizeof(registers); i++) { registers[i] = 0; }
+    for (int i = 0; i < 16; i++) { registers[i] = 0; }
 
     // Clear Memory
-    for (int i = 0; i < sizeof(memory); i++) { memory[i] = 0; }
+    for (int i = 0; i < 4096; i++) { memory[i] = 0; }
 
     // Set first 80 places of memory to font information
     for (int i = 0; i < 80; ++i) { memory[i] = chip8_fontset[i]; }
